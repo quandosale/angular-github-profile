@@ -28,7 +28,6 @@ export class AppComponent {
         });
       } else {
         this.message = "Not found";
-        console.log('asdfadsf');
       }
     })
   }
