@@ -15,10 +15,6 @@ export class GithubService {
       .toPromise()
       .then(res => {
         var data = res.json();
-        console.log(res);
-        if(data.message == "Not Found")
-          return null;
-
         return {
           name: data.login,
           image: data.avatar_url
