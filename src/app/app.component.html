@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<div class="main-page">
+  <div class="input">
+    <input type="text" #username value="brianleroux">
+    <button (click)="search(username.value)">Search</button>
+  </div>
+
+  <h3 class="error">{{message}}</h3>
+  <h2>Profile</h2>
+  <div class="profile" *ngIf="user">
+    <span>{{user.name}}</span>
+    <img [src]="user.image" width="150" alt="">
+  </div>
+
+  <h2>Followers</h2>
+  <div class="profile" *ngFor="let follower of followers">
+    <span>{{follower.name}}</span>
+    <img [src]="follower.image" width="150" alt=""> 
+  </div>
+</div>
